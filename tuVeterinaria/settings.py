@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 
     # Mis apps
-    "homepage",
+    "homepage.apps.HomepageConfig",
 ]
 
 MIDDLEWARE = [

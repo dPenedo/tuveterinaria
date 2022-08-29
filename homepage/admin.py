@@ -3,7 +3,6 @@ from homepage.models import Categoria
 from homepage.models import Producto
 
 class ProductoInline(admin.TabularInline):
-
     model = Producto
     extra = 0
 
@@ -26,15 +25,15 @@ class ProductoAdmin(admin.ModelAdmin):
         ),
 
     ]
-    list_display = ['producto', 'fecha_publicacion', 'tipo_de_producto', 'imagen', 'upper_case_name']
+    list_display = ['producto', 'fecha_publicacion', 'tipo_de_producto', 'imagen']
     ordering = ['-fecha_publicacion']
-    list_filter = ('producto', 'fecha_publicacion',)
+    list_filter = ('producto', 'fecha_publicacion', 'estado')
     search_fields=('producto', 'estado',)
     list_display_links = ('producto', 'fecha_publicacion',)
 
-    @admin.display(description='Name')
-    def upper_case_name(self, obj):
-        return ("%s %s" % (obj.producto, obj.estado)).upper()
+    #@admin.display(description='Name')
+    #def upper_case_name(self, obj):
+     #   return ("%s %s" % (obj.producto, obj.estado)).upper()
 
 #admin.site.register(Producto, ProductoAdmin)
 admin.site.register(Categoria, CategoriaAdmin)

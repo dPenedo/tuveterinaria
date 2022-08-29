@@ -6,6 +6,6 @@ import homepage
 
 def index(request):
     params = {}
-    params['nombre_sitio'] = 'Libros online'
+    params['nombre_sitio'] = 'tuVeterinaria'
     return render(request, 'homepage/index.html', params)
 # Create your views here.

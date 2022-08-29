@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.html import format_html
 
+
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
@@ -35,10 +36,9 @@ class Producto(models.Model):
         if self.estado == 'Retirado':
             return format_html('<span style="color: #f00;">{}</span>', self.estado, )
         elif self.estado == 'Borrador':
-            return format_html('<span style="background-color: #f0f; padding:7px;">{}</span>', self.estado, )
+            return format_html('<span style="color: #f0f;">{}</span>', self.estado, )
         elif self.estado == 'Publicado':
             return format_html('<span style="color: #099;">{}</span>', self.estado, )
 
     def __str__(self, ):
         return self.producto + "---" + str(self.fecha_publicacion)
-# Create your models here.
