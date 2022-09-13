@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
+    'registration',
     #apps por defecto
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
 
     # Mis apps
     "homepage.apps.HomepageConfig",
+    "usuarios.apps.UsuariosConfig",
 ]
 
 MIDDLEWARE = [
@@ -55,8 +58,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', ]
 
 ROOT_URLCONF = 'tuVeterinaria.urls'
 
@@ -135,3 +137,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'django.contrib.auth.views.login'
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AND_LOGIN = True
+SITE_ID = 1
