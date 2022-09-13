@@ -10,14 +10,14 @@ class Datosusuario(models.Model):
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", default='defecto/defecto.png', blank=True, null=True) 
     nombre               = models.CharField(max_length=50)
     apellido             = models.CharField(max_length=50)
-    email                = models.EmailField(max_length = 255)
     pais                 = models.CharField(max_length=30, blank=True)
     provincia            = models.CharField(max_length=40, blank=True)
     ciudad               = models.CharField(max_length=40, blank=True)
     domicilio            = models.CharField(max_length=80, blank=True)
-    codigo_postal        = models.CharField(max_length=50, blank=True)
-    celular             = models.CharField(max_length=30, blank=True)
-    animales            = models.CharField(max_length=2, blank=True)
+    codigo_postal        = models.IntegerField(max_length=50, blank=True)
+    celular              = models.IntegerField(max_length=30, blank=True)
+    dni                  = models.IntegerField(max_length=8, blank=True)
+    nro_animales         = models.IntegerField(default=0)
 
 
     def __str__(self):
