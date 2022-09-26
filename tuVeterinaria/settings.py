@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.sites',
-    'registration',
+    #'registration',
     #apps por defecto
     'django.contrib.admin',
     'django.contrib.auth',
