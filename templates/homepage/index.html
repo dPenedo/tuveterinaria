@@ -6,7 +6,9 @@
 <h1>Homepage de tuVeterinaria {{nombre_sitio}}</h1>
 <h2> Borrar después</h2>
 
+{% include "menu.html" with elementos_menu=elementos_menu %}
 <a href="{% url 'index' %}">
+
  <div class="container">
 	  <div class="row">
 		<div class="col color1">
