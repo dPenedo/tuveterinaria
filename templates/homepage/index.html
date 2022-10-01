@@ -1,61 +1,37 @@
 {% extends "layout.html" %}
 {% load static %}
 
-{% block contenedor %}
-<h1>Hola</h1> 
-<h1>Homepage de tuVeterinaria {{nombre_sitio}}</h1>
-<h2> Borrar después</h2>
+{% block contenedor %} 
 
-{% include "menu.html" with elementos_menu=elementos_menu %}
-<a href="{% url 'index' %}">
- 
-  <div class="container">
-	  <div class="row">
-		<div class="col color1">
-		  Column
-		</div>
-		<div class="col color2">
-		  Column
-		</div>
-		<div class="col color3">
-		  Column
-		</div>
-		<div class="col-12" >
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-			  <div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			  </div>
-			  <div class="carousel-inner">
-		{% for producto in producto|slice:"0:1"  %}
-				  <div class="carousel-item active">
-				    <img src="/media/{{producto.imagen}}" class="d-block w-100" alt="{{imagenes.nombre}}">
-				</div>
-		  {% endfor %}
-		{% for producto in producto|slice:"1:3"  %}
-				<div class="carousel-item">
-				    <img src="/media/{{producto.imagen}}" class="d-block w-100" alt="{{imagenes.nombre}}">
-				</div>
-		  {% endfor %}
-				<div class="carousel-item">
-				  <img src="img/mascotas3.jpg" class="d-block w-100" alt="...">
-				</div>
-			  </div>
-			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			  </button>
-			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			  </button>
-			</div>
-		</div>
-	  </div>
-	</div>    
+    <!--========================================================== -->
+			    <!-- Portada-->
+    <!--========================================================== -->
+    <main> 
+      <div class="d-flex p-5 justify-content-start w-100 h-100" style="background-image:url({% static 'img/perros-mosaico.png' %}); background-size: auto; background-repeat:repeat;"> 
+  <div class="py-5">
+<div class="card p-2 shadow border border-secondary rounded ms-md-5" style="width: 32rem;">
+  <div class="card-body">
+    <h3 class="card-title">tuVeterinaria</h3>
+    <p class="card-text"> Bienvenidos a tuVeterinaria, una plataforma digital diseñada para gestionar todos los cuidados que necesitás para tu mascota. </p>
+    <p class="card-text">Desde acá podrás pedir turno de consulta veterinaria, de peluquería, comprar productos para tu mascota, controlar los ciclos de vacunación de tu mascota y muchas otros servicios.  </p>
+  </div>
+</div>
+  </div> 
+</div>
+</main>
+
+    <!--========================================================== -->
+			    <!-- Secciones -->
+    <!--========================================================== -->
 
 
-   
+
+
+    <!--========================================================== -->
+			    <!-- FAQ -->
+    <!--========================================================== -->
+
+
+
 
 {% endblock %}
