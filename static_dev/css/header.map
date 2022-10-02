@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../scss/header.scss"
+	],
+	"sourcesContent": [
+		"#mainNav a{\n    color: #402525;\n    color:#1C0102 !important;\n  }\n  #logo{\n    width: 15%;\n  }\n  .card {\n    background-color: #E0DACA;\n  }\n  .user-comment{\n    border-radius: 50px;\n    width: 100px;\n    position: relative;\n  }\n  .read-more {font-weight: bold; \n          cursor: pointer; \n          text-decoration: none;}\n  "
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,QAAQ,CAAC,CAAC,CAAA;EACN,KAAK,EAAE,OAAO;EACd,KAAK,EAAC,kBAAkB;CACzB;;;AACD,AAAA,KAAK,CAAA;EACH,KAAK,EAAE,GAAG;CACX;;;AACD,AAAA,KAAK,CAAC;EACJ,gBAAgB,EAAE,OAAO;CAC1B;;;AACD,AAAA,aAAa,CAAA;EACX,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,QAAQ;CACnB;;;AACD,AAAA,UAAU,CAAC;EAAC,WAAW,EAAE,IAAI;EACrB,MAAM,EAAE,OAAO;EACf,eAAe,EAAE,IAAI;CAAE"
+}

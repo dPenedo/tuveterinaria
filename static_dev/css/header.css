@@ -1,0 +1,31 @@
+/* line 1, ../../Documentos/utn/tuveterinaria/static_dev/scss/header.scss */
+#mainNav a {
+  color: #402525;
+  color: #1C0102 !important;
+}
+
+/* line 5, ../../Documentos/utn/tuveterinaria/static_dev/scss/header.scss */
+#logo {
+  width: 15%;
+}
+
+/* line 8, ../../Documentos/utn/tuveterinaria/static_dev/scss/header.scss */
+.card {
+  background-color: #E0DACA;
+}
+
+/* line 11, ../../Documentos/utn/tuveterinaria/static_dev/scss/header.scss */
+.user-comment {
+  border-radius: 50px;
+  width: 100px;
+  position: relative;
+}
+
+/* line 16, ../../Documentos/utn/tuveterinaria/static_dev/scss/header.scss */
+.read-more {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=header.css.map */
