@@ -5,7 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
-/* line 1, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_root.scss */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -60,7 +59,6 @@
   --bs-body-bg: #fff;
 }
 
-/* line 16, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 *,
 *::before,
 *::after {
@@ -68,13 +66,11 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* line 28, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   :root {
     scroll-behavior: smooth;
   }
 }
 
-/* line 49, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -88,7 +84,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 69, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -97,12 +92,10 @@ hr {
   opacity: 0.25;
 }
 
-/* line 77, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 hr:not([size]) {
   height: 1px;
 }
 
-/* line 88, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -110,71 +103,59 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* line 98, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
 
 @media (min-width: 1200px) {
-  /* line 98, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   h1 {
     font-size: 2.5rem;
   }
 }
 
-/* line 103, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 
 @media (min-width: 1200px) {
-  /* line 103, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   h2 {
     font-size: 2rem;
   }
 }
 
-/* line 108, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 
 @media (min-width: 1200px) {
-  /* line 108, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   h3 {
     font-size: 1.75rem;
   }
 }
 
-/* line 113, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
 
 @media (min-width: 1200px) {
-  /* line 113, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   h4 {
     font-size: 1.5rem;
   }
 }
 
-/* line 118, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h5 {
   font-size: 1.25rem;
 }
 
-/* line 123, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 h6 {
   font-size: 1rem;
 }
 
-/* line 134, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* line 147, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 abbr[title],
 abbr[data-bs-original-title] {
   text-decoration: underline dotted;
@@ -182,20 +163,17 @@ abbr[data-bs-original-title] {
   text-decoration-skip-ink: none;
 }
 
-/* line 157, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
 }
 
-/* line 166, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ol,
 ul {
   padding-left: 2rem;
 }
 
-/* line 171, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ol,
 ul,
 dl {
@@ -203,7 +181,6 @@ dl {
   margin-bottom: 1rem;
 }
 
-/* line 178, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ol ol,
 ul ul,
 ol ul,
@@ -211,40 +188,33 @@ ul ol {
   margin-bottom: 0;
 }
 
-/* line 185, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 dt {
   font-weight: 700;
 }
 
-/* line 191, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 dd {
   margin-bottom: .5rem;
   margin-left: 0;
 }
 
-/* line 199, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 blockquote {
   margin: 0 0 1rem;
 }
 
-/* line 208, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 b,
 strong {
   font-weight: bolder;
 }
 
-/* line 218, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 small {
   font-size: 0.875em;
 }
 
-/* line 225, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 mark {
   padding: 0.2em;
   background-color: #fcf8e3;
 }
 
-/* line 236, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 sub,
 sup {
   position: relative;
@@ -253,34 +223,28 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 244, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 sub {
   bottom: -.25em;
 }
 
-/* line 245, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 sup {
   top: -.5em;
 }
 
-/* line 250, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 a {
   color: #0d6efd;
   text-decoration: underline;
 }
 
-/* line 254, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 a:hover {
   color: #0a58ca;
 }
 
-/* line 266, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 276, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 pre,
 code,
 kbd,
@@ -291,7 +255,6 @@ samp {
   unicode-bidi: bidi-override;
 }
 
-/* line 290, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 pre {
   display: block;
   margin-top: 0;
@@ -300,26 +263,22 @@ pre {
   font-size: 0.875em;
 }
 
-/* line 299, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 pre code {
   font-size: inherit;
   color: inherit;
   word-break: normal;
 }
 
-/* line 306, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 code {
   font-size: 0.875em;
   color: #d63384;
   word-wrap: break-word;
 }
 
-/* line 312, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 a > code {
   color: inherit;
 }
 
-/* line 317, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
@@ -328,31 +287,26 @@ kbd {
   border-radius: 0.2rem;
 }
 
-/* line 324, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 kbd kbd {
   padding: 0;
   font-size: 1em;
   font-weight: 700;
 }
 
-/* line 336, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 figure {
   margin: 0 0 1rem;
 }
 
-/* line 343, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 img,
 svg {
   vertical-align: middle;
 }
 
-/* line 353, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 table {
   caption-side: bottom;
   border-collapse: collapse;
 }
 
-/* line 358, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -360,13 +314,11 @@ caption {
   text-align: left;
 }
 
-/* line 369, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
 
-/* line 375, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 thead,
 tbody,
 tfoot,
@@ -378,22 +330,18 @@ th {
   border-width: 0;
 }
 
-/* line 391, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 label {
   display: inline-block;
 }
 
-/* line 398, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 button {
   border-radius: 0;
 }
 
-/* line 408, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-/* line 414, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 input,
 button,
 select,
@@ -405,33 +353,27 @@ textarea {
   line-height: inherit;
 }
 
-/* line 426, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 433, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 [role="button"] {
   cursor: pointer;
 }
 
-/* line 437, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 select {
   word-wrap: normal;
 }
 
-/* line 443, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 select:disabled {
   opacity: 1;
 }
 
-/* line 451, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 [list]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-/* line 460, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 button,
 [type="button"],
 [type="reset"],
@@ -439,7 +381,6 @@ button,
   -webkit-appearance: button;
 }
 
-/* line 467, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -447,18 +388,15 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-/* line 475, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-/* line 482, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 493, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 fieldset {
   min-width: 0;
   padding: 0;
@@ -466,7 +404,6 @@ fieldset {
   border: 0;
 }
 
-/* line 505, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 legend {
   float: left;
   width: 100%;
@@ -477,18 +414,15 @@ legend {
 }
 
 @media (min-width: 1200px) {
-  /* line 505, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
   legend {
     font-size: 1.5rem;
   }
 }
 
-/* line 514, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 legend + * {
   clear: left;
 }
 
-/* line 522, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-webkit-datetime-edit-fields-wrapper,
 ::-webkit-datetime-edit-text,
 ::-webkit-datetime-edit-minute,
@@ -499,12 +433,10 @@ legend + * {
   padding: 0;
 }
 
-/* line 532, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-webkit-inner-spin-button {
   height: auto;
 }
 
-/* line 542, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
@@ -518,51 +450,40 @@ legend + * {
   direction: ltr;
 }
 */
-/* line 563, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 569, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-/* line 576, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::file-selector-button {
   font: inherit;
 }
 
-/* line 583, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
 }
 
-/* line 590, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 output {
   display: inline-block;
 }
 
-/* line 596, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 iframe {
   border: 0;
 }
 
-/* line 604, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 summary {
   display: list-item;
   cursor: pointer;
 }
 
-/* line 614, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 progress {
   vertical-align: baseline;
 }
 
-/* line 623, ../../Documentos/utn/tuveterinaria/static_dev/scss/bootstrap/_reboot.scss */
 [hidden] {
   display: none !important;
 }
-
-/*# sourceMappingURL=bootstrap-reboot.css.map */

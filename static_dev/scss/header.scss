@@ -1,19 +1,45 @@
-#mainNav a{
-    color: #402525;
-    color:#1C0102 !important;
+//Navbar
+#mainNav{ .nav-link{
+    color: $color1 ;
   }
+  .active{
+  font-weight: bold;}
   #logo{
-    width: 15%;
+    width: 6rem;
+    height: auto;
   }
-  .card {
-    background-color: #E0DACA;
+}
+
+.card {
+    background-color:$color2;
+    border-radius: 50%;
+    
+    #logo-simple{
+    width:10rem;
+    height: auto;
+    border-radius: 20%;
+    }
+
+
   }
-  .user-comment{
+
+
+.enlace-seccion{
+     text-decoration: none;
+     color: #000;
+}
+
+
+
+
+
+.user-comment{
     border-radius: 50px;
     width: 100px;
     position: relative;
   }
-  .read-more {font-weight: bold; 
+.read-more {font-weight: bold; 
           cursor: pointer; 
           text-decoration: none;}
   
+
