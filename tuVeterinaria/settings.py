@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
 
     # Mis apps
+    "productos.apps.ProductosConfig",
     "homepage.apps.HomepageConfig",
     "usuarios.apps.UsuariosConfig",
 ]

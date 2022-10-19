@@ -14,9 +14,9 @@ class Datosusuario(models.Model):
     provincia            = models.CharField(max_length=40, blank=True)
     ciudad               = models.CharField(max_length=40, blank=True)
     domicilio            = models.CharField(max_length=80, blank=True)
-    codigo_postal        = models.IntegerField(max_length=50, blank=True)
-    celular              = models.IntegerField(max_length=30, blank=True)
-    dni                  = models.IntegerField(max_length=8, blank=True)
+    codigo_postal        = models.IntegerField(blank=True)
+    celular              = models.IntegerField(blank=True)
+    dni                  = models.IntegerField(default= 1111111, blank=True)
     nro_animales         = models.IntegerField(default=0)
 
 
