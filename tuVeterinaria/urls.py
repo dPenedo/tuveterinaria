@@ -24,8 +24,11 @@ urlpatterns = [
     #path('accounts/', include('registration.backends.default.urls')),
     path('accounts/', include('django_registration.backends.activation.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('captcha/', include('captcha.urls')),
+    path('contacto/', include('contacto.urls')),
+    path('tienda/', include('tienda.urls')),
     path('admin/', admin.site.urls),
-    path('panel de usuario/', include('usuarios.urls')),
+    path('usuarios/', include('usuarios.urls')),
 ] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #if settings.DEBUG:

@@ -44,12 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps de terceros
-
+    'captcha',
 
     # Mis apps
-    "productos.apps.ProductosConfig",
-    "homepage.apps.HomepageConfig",
-    "usuarios.apps.UsuariosConfig",
+    'contacto.apps.ContactoConfig',
+    'productos.apps.ProductosConfig',
+    'homepage.apps.HomepageConfig',
+    'tienda.apps.TiendaConfig',
+    'usuarios.apps.UsuariosConfig',
 ]
 
 MIDDLEWARE = [
