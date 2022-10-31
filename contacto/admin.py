@@ -7,7 +7,7 @@ class RespuestaInline(admin.TabularInline):
     extra = 0
     
 class ConsultaAdmin(admin.ModelAdmin):
-    inlines=[RespuestaInline]
+    inlines = [RespuestaInline]
     list_display = ['estado_de_respuesta', 'nombre', 'descripcion', 'mail', 'telefono', 'fecha']
     list_filter = ['estado_respuesta', 'fecha']
 

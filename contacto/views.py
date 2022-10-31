@@ -19,6 +19,6 @@ class MensajeEnviado(View):
     template = 'contacto/mensaje_enviado.html'
 
     def get(self, request):
-        params={}
+        params = {}
         params["mensaje"] = "Aquí va el mensaje del diccionario del views" 
         return render(request, self.template, params)

@@ -3,7 +3,7 @@ from productos.models import Producto
 
 class CargarForm(ModelForm):
     class Meta:
-        model=Producto
+        model = Producto
         fields = ['producto', 'fecha_publicacion', 'imagen']
        
     def __init__(self, *args, **kwargs):
