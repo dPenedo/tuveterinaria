@@ -5,8 +5,11 @@
 <div class="contenedor">
     <div class="row">
       <div class="col-12">
+          <h1>Estos son nuestros productos:</h1>
           {% for producto in productos %}
-                <a href="{% url 'ver' producto.id%}">
+                <a href="{% url 'ver' producto.id %}">
+                    <p> {{producto.producto}} </p>
+                    <p> {{producto.categoria}} </p>
                     <img src="/media/{{producto.imagen}}" style="width: 30%;"/>
                 </a>
           {% endfor %}

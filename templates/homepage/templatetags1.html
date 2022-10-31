@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenedor %} 
+<script type="text/javascript" src={% static "js/jquery.js" %}></script>
+    <!--========================================================== -->
+			    <!-- Portada-->
+    <!--========================================================== -->
+    <div class="container">
+        <div class="col-12 prueba div pruebas" style="padding-top: 70px;">
+    <h1>Probando templatetags</h1>
+            {% autoescape off %}
+                {{ cross_site_scripting }}
+            {% endautoescape %}
+</div>
+</div>
+
+
+    <div class="container">
+        <div class="col-12 prueba div pruebas" style="padding-top: 70px;">
+    <h1>Hola estoy trabajando con  comentarios</h1>
+        <!-- 
+        Esto es un comentario HTML
+        --->
+    <p>Rendered text with {{ fecha_de_hoy }}</p>
+    {% comment "Para probar los comentarios" %}
+        <p>Este es un comentario {{ fecha_de_hoy }}</p>
+    {% endcomment %}
+
+</div>
+</div>
+    <div class="container">
+        <div class="col-12 prueba div pruebas" style="padding-top: 70px;">
+    <h1>Estoy viendo cycle</h1>
+    <ul>
+    {% for elemento in mi_lista %}
+    <li class="{% cycle 'row1' 'row2' row3 %}">
+        {{elemento}}
+         elemento
+    </li>
+{% endfor %}
+    </ul>
+</div>
+</div>
+    <div class="container">
+        <div class="col-12 prueba div pruebas" style="padding-top: 70px;">
+    <h1>Estoy viendo listas vacías</h1>
+    <ul>
+    {% for elemento in mi_lista2 %}
+    <li class="{% cycle 'row1' 'row2' row3 %}">
+        {{elemento}}
+         elemento
+    </li>
+
+
+{% empty %}
+    <li class="{% cycle 'row1' 'row2' row3 %}">
+        No existen elementos
+    </li>
+
+{% endfor %}
+    </ul>
+</div>
+</div>
+{% endblock %}
