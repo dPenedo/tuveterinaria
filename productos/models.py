@@ -31,6 +31,11 @@ class Producto(models.Model):
         Categoria, blank=False, null=True, on_delete=models.CASCADE
     )
     
+    stock = models.IntegerField(default=0)
+    descripcion = models.TextField(  default="")
+    precio = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    descuento = models.IntegerField(default=0)
+    
     def tipo_de_producto(self):
         if self.estado == 'Retirado':
             return format_html('<span style="color: #f00;">{}</span>', self.estado, )
