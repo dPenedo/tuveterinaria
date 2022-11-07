@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #apps de terceros
     'captcha',
-
     # Mis apps
     'contacto.apps.ContactoConfig',
     'productos.apps.ProductosConfig',

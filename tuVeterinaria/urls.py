@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('homepage.urls')),
     #path('accounts/', include('registration.backends.default.urls')),
-    path('accounts/', include('django_registration.backends.activation.urls')),
+    # path('accounts/', include('django_registration.backends.activation.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('captcha/', include('captcha.urls')),
     path('contacto/', include('contacto.urls')),

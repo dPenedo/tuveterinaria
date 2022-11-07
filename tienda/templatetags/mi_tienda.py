@@ -8,4 +8,3 @@ def en_pedido(producto, el_pedido):
         if int(id) == producto.id:
             return True
     return False
-
