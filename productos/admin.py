@@ -10,6 +10,12 @@ class ProductoInline(admin.TabularInline):
 class CategoriaAdmin(admin.ModelAdmin):
     inlines = [ProductoInline]
 
+
+def publicar(modeladmin, request, queryset):
+    queryset.update(estado="Publicado")
+
+publicar.short_description = "Pasar a publicado"
+
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
     #fields =['categoria', 'fecha_publicacion', 'producto', 'imagen']
@@ -38,6 +44,7 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)
     list_display_links = ('producto', 'fecha_publicacion',)
+    actions=[publicar]
 
     @admin.display(description='Name')
     def upper_case_name(self, obj):
