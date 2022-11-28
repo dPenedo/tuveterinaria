@@ -47,4 +47,21 @@ def ver_imagen(request, producto_id):
     params["producto"] = producto
     return render(request, "tienda/verimagen.html", params)
 
+class EjemploLocalSotage(View):
+    template = "tienda/localstorage.html"
+
+    def get(self, request):
+        params = {}
+        try:
+            productos = Producto.objects.all()
+        except Producto.DoesNotExist:
+            raise Http404
+        params["productos"] = productos
+
+        try:
+            request.session["carro"]
+        except:
+            request.session["carro"] = {}
+
+        return render(request, self.template, params)
 
