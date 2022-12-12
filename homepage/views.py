@@ -1,3 +1,8 @@
+# from datetime import datetime
+# from http.client import HTTPResponse
+# import mimetypes
+
+from django.http.response import mimetypes
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.db.models import Q
@@ -6,6 +11,33 @@ from django.views.generic import View
 import datetime
 from django.shortcuts import redirect
 import homepage
+import json
+from django.http import HttpResponse
+from productos.forms import SearchLibroForm
+
+
+def para_ajax(request):
+    params = {}
+    search =  SearchLibroForm()
+    params['search'] = search
+    return render(request, 'homepage/ver_ajax.html', params)
+
+class BuscarLibro(View):
+    def get(self, request):
+        if request.is_ajax:
+            palabra = request.GET.get('term', '')
+            print(palabra)
+            libro = Producto.objects.filter(producto__icontains = palabra)
+            result = []
+            for an in libro:
+                data = {}
+                data['label'] = an.producto
+                result.append(data)
+            data_json = json.dumps(result)
+        else:
+            data_json = "Falló"
+        mimetype = "application/json"
+        return HttpResponse (data_json, mimetype)
 
 
 def index(request):
