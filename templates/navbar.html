@@ -10,6 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav p-3 ms-auto">
 
+
+
+
+
       {% if user.is_authenticated %}
       <div class="text-dark text-uppercase ms-4 ">
         <a class="nav-link" href="#services"><i class="fa-solid fa-user me-2"></i>{{user.username}}</a>
@@ -47,10 +51,15 @@
                   <li class="nav-item">
                       <a class="nav-link active" href="{% url 'contacto'  %}">Contacto</a>
                   </li>
+<!-- Usuario autenticado(inicio) -->
       {% if user.is_authenticated %}
                   <li class="nav-item">
                       <a class="nav-link" href="{% url 'logout' %}">Finalizar Sesión</a>
                   </li>
+
+<!-- Usuario autenticado(fin) -->
+
+<!-- Usuario No autenticado(inicio) -->
         {% else %}
 
                   <li class="nav-item">
@@ -60,6 +69,7 @@
                       <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
                   </li>
      {% endif %}
+<!-- Usuario No autenticado(fin) -->
 
 
           <li class="nav-item dropdown">
