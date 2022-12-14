@@ -3,22 +3,12 @@
 {% load static %}
 {% load i18n %}
 {% block usuarios %}
-<!-- ---------------------------------------------------------------------------
--------------- 
-------------------------------------------------------------------------------->
- <!-- <div class="container-fluid"   > -->
- <!--    <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">    -->
- <!--        <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;"> -->
-	<!-- 	<h1 class="h1juan" style="padding-left:15px;">Hola estoy en Registro</h1>     -->
-        <!-- <form method="POST" action=""> {% csrf_token %}> -->
-        <!--     {{form}} -->
-        <!--    <button type="submit" class="btn btn-danger float-right">Registrar</button>  -->
-        <!-- </div>     -->
-         
-     </div>
- </div>  
 
-      <div class="py-3">
+
+<div class="container-fluid fondo-formulario" style=" background-image:url({% static "img/patron1.jpg" %});" >
+
+      <div class="py-5 ">
+
          <form method="POST" class="row g-0 bg-light p-5 col-lg-7 border  rounded shadow mt-5 ms-md-5">
             <h3 class="row p-lg-3 justify-content-center">Registrarme:</h3>
               {% csrf_token %}
@@ -27,6 +17,8 @@
             <a class='row-2 btn btn-danger p-2 mt-2' href={% url 'index' %}>Cancelar</a>
           </form>
         </div>
+        
+</div>
 
 
 
