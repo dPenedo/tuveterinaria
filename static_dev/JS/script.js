@@ -1,3 +1,16 @@
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".animado", {
+    scrollTrigger: {
+    trigger: ".animado",
+    toggleActions: "restart pause reverse pause"
+    },
+    x: 8,
+    rotation: 360,
+    duration: 2
+})
+
+
 
 function toggleText1() {
             var points1 = document.getElementById("points1");
