@@ -1,6 +1,9 @@
 from django.contrib import admin
 from productos.models import Categoria
 from productos.models import Producto
+from django.http import HttpResponse
+from django.core import serializers
+from django.shortcuts import render
 
 class ProductoInline(admin.TabularInline):
 
@@ -11,10 +14,6 @@ class CategoriaAdmin(admin.ModelAdmin):
     inlines = [ProductoInline]
 
 
-def publicar(modeladmin, request, queryset):
-    queryset.update(estado="Publicado")
-
-publicar.short_description = "Pasar a publicado"
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
@@ -44,11 +43,36 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)
     list_display_links = ('producto', 'fecha_publicacion',)
-    actions=[publicar]
+    actions=["publicar", "exportar_a_json", "ver_productos"]
 
     @admin.display(description='Name')
     def upper_case_name(self, obj):
         return ("%s %s" % (obj.producto, obj.estado)).upper()
+
+    def publicar(self, request, queryset):
+        registro = queryset.update(estado="Publicado")
+
+        if registro == 1:
+            mensaje = "1 registro actualizado"
+        else:
+            mensaje = "%s registros actualizados" % registro
+        self.message_user(request, "%s exitosamente" % mensaje)
+
+    publicar.short_description = "Pasar a publicado"
+
+    def exportar_a_json(self, request, queryset):
+        response = HttpResponse(content_type = "application/json")
+        serializers.serialize("json", queryset, stream = response)
+        return response
+
+    def ver_productos(self, request, queryset):
+        params = {}
+        productos = Producto.objects.all
+        params["productos"] = productos
+        return render(request, "admin/productos/productos.html", params)
+
+    ver_productos.short_description = "ver productos"
+
 
 #admin.site.register(Producto, ProductoAdmin)
 admin.site.register(Categoria, CategoriaAdmin)

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{%  load static %}
+{%  block ver_productos %}
+
+<div class="container">
+ <div class="row">
+        <h3 class="my-4">Productos seleccionados:</h3>
+        <div class="col-12 my-3">
+
+
+            <ul class="list-group list-group-flush">
+            {% for producto in productos %}
+                {% if producto.estado == "Publicado" %}
+                <li class="list-group-item list-group-item-primary"><b>Nombre del producto:</b> {{producto.producto}}</li> 
+                <li class="list-group-item"><b>Fecha de publicación:</b> {{producto.fecha_publicacion}}</li> 
+                <li class="list-group-item"><b>Estado del producto:</b>{{producto.estado}}</li> 
+                {% else %}
+                <li class="list-group-item list-group-item-secondary"><b>Nombre del producto:</b> {{producto.producto}}</li> 
+                <li class="list-group-item"><b>Fecha de publicación:</b> {{producto.fecha_publicacion}}</li> 
+                <li class="list-group-item"><b>Estado del producto:</b> {{producto.estado}}</li> 
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+ </div>
+</div>
+
+{% endblock %}
+
