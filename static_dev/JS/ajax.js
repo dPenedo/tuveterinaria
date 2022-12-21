@@ -19,7 +19,7 @@ function respuestproducto(valor){
 				xhr.setRequestHeader("X-CSRFToken", csrftoken);
 			}
 		},
-		url : "/buscar_libro/",
+		url : "/buscar_libro2/",
 		type : "GET",
 		data : { valor : valor,},
 		success : function(json){

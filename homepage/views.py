@@ -1,6 +1,6 @@
-# from datetime import datetime
+from datetime import datetime
 # from http.client import HTTPResponse
-# import mimetypes
+import mimetypes
 
 from django.http.response import mimetypes
 from django.shortcuts import render
@@ -16,6 +16,9 @@ from django.http import HttpResponse
 from productos.forms import SearchLibroForm
 
 
+
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 def para_ajax(request):
     params = {}
     search =  SearchLibroForm()
@@ -24,10 +27,11 @@ def para_ajax(request):
 
 class BuscarLibro(View):
     def get(self, request):
-        if request.is_ajax:
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
             palabra = request.GET.get('term', '')
             print(palabra)
             libro = Producto.objects.filter(producto__icontains = palabra)
+            print(palabra)
             result = []
             for an in libro:
                 data = {}
@@ -37,7 +41,46 @@ class BuscarLibro(View):
         else:
             data_json = "Falló"
         mimetype = "application/json"
-        return HttpResponse (data_json, mimetype)
+        return HttpResponse(data_json, mimetype)
+
+
+
+class BuscarLibro2(View):
+    def get(self, request):
+        if request.is_ajax:
+            q = request.GET['valor']
+            libro = Producto.objects.filter(producto__icontains=q)
+            results = []
+            for rec in libro:
+                print(rec.producto)
+                print(rec.estado)
+                print(rec.imagen)
+                data = {}
+                data['producto'] = rec.producto
+                data['estado'] = rec.estado
+                data['ruta_imagen'] = str(rec.imagen)
+                results.append(data)
+            data_json = json.dumps(results)
+
+        else:
+            data_json = "fallo"
+        mimetype = "application/json"
+        return HttpResponse(data_json, mimetype)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def index(request):

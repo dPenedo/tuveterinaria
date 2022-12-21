@@ -1,9 +1,10 @@
 {% load static %}
 
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-    <a class="navbar-brand ms-3" href="{% url 'index' %}"><img id="logo" src="{% static 'img/logo veterinaria.png' %}" alt="logo de tuVeterinaria"/></a
+    <a class="navbar-brand ms-3" href="{% url 'index' %}"><img id="logo" src="{% static 'img/logo veterinaria.png' %}" alt="logo de tuVeterinaria"/></a>
   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -11,17 +12,23 @@
     <ul class="navbar-nav p-3 ms-auto">
 
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              localStorage
+          <!-- <li class="nav-item dropdown"> -->
+          <!--   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+          <!--     localStorage -->
+          <!--   </a> -->
+          <!--   <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+          <!--     <li><a class="dropdown-item" href="{% url 'ejemplo_localstorage' %}">Ejemplo</a></li> -->
+          <!--     <li><a class="dropdown-item" href="{% url 'templatetags1' %}">templatetags</a></li> -->
+          <!--   </ul> -->
+          <!-- </li> -->
+
+
+          <li class="nav-item  ">
+            <a class="nav-link  " href="{% url 'usar_ajax' %}"   role="button"   aria-expanded="false">
+              Buscar productos
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'ejemplo_localstorage' %}">Ejemplo</a></li>
-              <li><a class="dropdown-item" href="{% url 'templatetags1' %}">templatetags</a></li>
-            </ul>
+             
           </li>
-
-
 
 
 
