@@ -3,19 +3,35 @@
 {% block tienda %} 
 
 <div class="contenedor">
-    <div class="row">
+
+      <div class="col-8">
+          <h1>Estos son nuestros productos:</h1>
+
+          {% for producto in productos %}
+                    <!-- <p> {{producto.producto}} </p>
+                    <p> {{producto.categoria}} </p> -->
+                    <!-- <img src="/media/{{producto.imagen}}" style="width: 30%;"/> -->
+                </a>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/media/{{producto.imagen}}" alt="Card image cap" style="width: 30%">
+  <div class="card-body">
+    <h5 class="card-title"> {{producto.producto}}  </h5>
+    <p class="card-text"> {{producto.categoria}} </p>
+    <a href="{% url 'ver' producto.id %}" class="btn btn-primary">Ver Producto </a>
+  </div>
+</div>
+</div>
+
+          {% endfor %}
+
+
+    <!-- <div class="row">
       <div class="col-12">
           <h1>Estos son nuestros productos:</h1>
-          {% for producto in productos %}
-                <a href="{% url 'ver' producto.id %}">
-                    <p> {{producto.producto}} </p>
-                    <p> {{producto.categoria}} </p>
-                    <img src="/media/{{producto.imagen}}" style="width: 30%;"/>
-                </a>
-          {% endfor %}
       
       </div>
-      </div>
+      </div> -->
 </div>
 
 
