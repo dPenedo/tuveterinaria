@@ -134,3 +134,6 @@ class Templatetags1(View):
         print(request.session["el_pedido"])
 
         return redirect("templatetags1")
+
+def nodisponible(request):
+    return render(request, 'homepage/nodisponible.html')

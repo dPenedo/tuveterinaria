@@ -10,4 +10,6 @@ urlpatterns = [
     path('usar_ajax', views.para_ajax, name='usar_ajax'),
     path('buscar_libro/', BuscarLibro.as_view(), name="buscar_libro"),
     path('buscar_libro2/', BuscarLibro2.as_view(), name="buscar_libro2"),
+    path('reserva/', views.nodisponible, name='reserva'),
+    path('peluqueria/', views.nodisponible, name='peluqueria'),
 ]
