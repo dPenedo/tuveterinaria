@@ -51,7 +51,10 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'tienda.apps.TiendaConfig',
     'usuarios.apps.UsuariosConfig',
+    'django.contrib.sitemaps',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
