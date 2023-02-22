@@ -1,24 +1,98 @@
 {% extends "layout.html" %}
 {% block title %}Contacto{% endblock %}
+
 {% load static %}
 {% load i18n %}
 {% block contacto %}
-<!-- ---------------------------------------------------------------------------
--------------- 
-------------------------------------------------------------------------------->
- <div class="container">
 
-</div> 
+<div class="container-fluid fondo-formulario " style=" background-image:url({% static "img/patron1.jpg" %});" >
+
+      <div class="py-5 ">
+
+
      
+ <div class="container-fluid my-md-5 border shadow rounded bg-light col-md-10"   >
+    <div class="row  col-md-8 ms-3 md-md-1 justify-content-around align-items-center" >   
+        <div class=" col-md-8 contacto_form">
+		<h1 class="h1juan py-5" >Contacto</h1>    
+		
+		<form id="contact" action="" method="post" class="col-xs-12"><input type="hidden" name="csrfmiddlewaretoken" value="8d5QIY3URd4QnBRue0B1dKAsxJjK8di2DbKg53lLE74kx8nztm4KnmOunsPTQWow"> 		
+		      <p>
+    <label class="row" for="id_telefono">Telefono:</label>
+    <input type="text" class="row form-control" name="telefono" maxlength="50" id="id_telefono">
+    
+    
+  </p>
+
+  
+  <p>
+    <label class="row" for="id_nombre">Nombre:</label>
+    <input class="row form-control" type="text" name="nombre" maxlength="50" id="id_nombre">
+    
+    
+  </p>
+
+  
+  <p>
+    <label class="row" for="id_mail">Mail:</label>
+    <input class="row form-control" type="email" name="mail" maxlength="50" id="id_mail">
+    
+    
+  </p>
+
+  
+  <p>
+    <label class="row" for="id_fecha">Fecha:</label>
+    <input class="row form-control" type="text" name="fecha" value="2023-02-22" id="id_fecha"><input type="hidden" name="initial-fecha" value="2023-02-22 22:45:55" id="initial-id_fecha">
+    
+    
+  </p>
+
+  
+  <p>
+    <label class="row" for="id_descripcion">Descripcion:</label>
+    <textarea class="row form-control" name="descripcion" cols="40" rows="10" required id="id_descripcion">
+</textarea>
+    
+    
+  </p>
+
+  
+  <p>
+    <label class="row" for="id_captcha_1">Captcha:</label>
+    <img class="captcha row w-5" src="/captcha/image/fb52a088023c0167f91a71bd05bacaaae5e04644/" alt="captcha"  />
+    <div class="row">
+<input type="hidden" class="form-control" name="captcha_0" value="fb52a088023c0167f91a71bd05bacaaae5e04644" required id="id_captcha_0"><input type="text" name="captcha_1" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
+</div>
+    
+      
+    
+  </p>
+		    </div> 
+		      <div class="row">
+			  <div class="col-4"></div>
+			  <div class="col-9 mx-auto mx-md-0 col-md-4">
+			      <button type="submit"  class="my-4 col-8 col-md-12 btn btn-danger border rounded shadow">Enviar</button>
+			  </div>
+		      </div>                        
+		  </form>
+        </div>    
+         
+     </div>
+ </div>  
+ </div>  
+
+   
+{% comment %}      
  <div class="container-fluid"   >
     <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">   
         <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
 		<h1 class="h1juan" style="padding-left:15px;">Contacto</h1>    
 		<form id="contact" action="" method="post" class="col-xs-12">{% csrf_token %} 		
 		<div class="row col-12 form-group" >
-		      {{form }}
+		      {{form.as_p }}
 		    </div> 
-		      <div class="row justify-content-between">
+		      <div class="row">
 			  <div class="col-4"></div>
 			  <div class="col-4" style="padding-right:30px;">
 			      <button type="submit"  class=" col-12 btn btn-danger">Enviar</button>
@@ -37,7 +111,7 @@
            <br/> 
         </div>
     </div>
-</section>
+</section> {% endcomment %}
    
   
 
@@ -45,7 +119,7 @@
 
 {% endblock %}
 {% block javascript %}
-<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
 <script type="text/javascript" src="{% static 'js/juan_ajax.js' %}"></script>
 
  
@@ -77,4 +151,4 @@
 	
 	
 	
-{% endblock %}
+{% endblock %} 
