@@ -1,11 +1,10 @@
 {% extends "layout.html" %}
-{% block title %}Contacto{% endblock %}
+{% block title %}Registro{% endblock %}
 {% load static %}
 {% load i18n %}
 {% block usuarios %}
 
-
-<div class="container-fluid fondo-formulario" style=" background-image:url({% static "img/patron1.jpg" %});" >
+{% comment %} <div class="container-fluid fondo-formulario" style=" background-image:url({% static "img/patron1.jpg" %});" >
 
       <div class="py-5 ">
 
@@ -18,7 +17,83 @@
           </form>
         </div>
         
+</div> {% endcomment %}
+
+
+<div class="container-fluid fondo-formulario" style=" background-image:url(/static/img/patron1.jpg);" >
+
+  <div class="py-5 ">
+
+     <form method="POST" class="row g-0 bg-light p-5 col-lg-7 border  rounded shadow mt-md-5 p-2 ms-md-5">
+        <h3 class="row p-lg-3 justify-content-center">Registrarme:</h3>
+          <input type="hidden" name="csrfmiddlewaretoken" value="5fFXwD5NPvTWDaiuybIgaJnC8EWRCqrLAdknTInECpTqNHOzNxbZklBEYns0k9xf">
+          <tr>
+          <div class="py-2 container">
+<th><label class="row" for="id_username">Nombre de usuario:</label></th>
+<td>
+  
+  <input type="text" class="row form-control" name="username" maxlength="150" autofocus required id="id_username">
+    <small class="row form-text text-muted">Puede tener como máximo 150 caracteres.</small>
+  
+  
+</td>
+</tr>
 </div>
+          <div class="py-2 container">
+<tr>
+<th><label class="row" for="id_email">Dirección de correo electrónico:</label></th>
+<td>
+  
+  <input class="row form-control" type="email" name="email" maxlength="254" id="id_email">
+  
+  
+</td>
+</tr>
+
+</div>
+<tr>
+          <div class="py-2 container">
+<th><label class="row" for="id_password1">Contraseña:</label></th>
+<td>
+  
+  <input class="row form-control" type="password" name="password1" autocomplete="new-password" required id="id_password1">
+  
+    <small class="row form-text text-muted">Debe tener como mínimo 8 caracteres.</small>
+  
+  
+</div>
+          <div class="py-2 container">
+</td>
+</tr>
+<tr>
+<th><label class="row" for="id_password2">Confirmación de contraseña:</label></th>
+<td>
+  
+  <input class="row form-control" type="password" name="password2" autocomplete="new-password" required id="id_password2">
+  
+    <small class="row form-text text-muted">Escriba otra vez la misma contraseña para verificarla.</small>
+  
+</div>
+  
+    
+  
+</td>
+</tr>
+        <button type="submit"  class="btn border btn-primary mt-2" style="background-color: #1C0102;">Registrarme</button>
+        <a class='row-2 btn btn-danger p-2 mt-2' href=/>Cancelar</a>
+      </form>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+ 
 
 
 
