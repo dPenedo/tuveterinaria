@@ -40,4 +40,27 @@
           cursor: pointer; 
           text-decoration: none;}
   
+.whatsapp_ic {
+  position: fixed;
 
+  height: 25px;
+  bottom: 75%;
+  right: 3%;
+
+  color: #fff;
+  font-size: 15px;
+
+  a {
+    border-radius: 15px;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    background-color: #7BB75B;
+    color: #fff;
+  }
+  a:hover {
+    background-color: #46C657;
+  }
+}

@@ -6,7 +6,7 @@
 			    <!-- Portada-->
     <!--========================================================== -->
     <main> 
-      <div class="d-flex p-5 justify-content-start w-100 h-100" style="background-image:url({% static 'img/perros-mosaico.png' %}); background-size: auto; background-repeat:repeat;"> 
+      <div class="d-flex p-5 justify-content-start w-100 h-100" style="background-image:url({% static 'img/perros-mosaico.png' %}); background-attachment:fixed; background-size: auto; background-repeat:repeat;"> 
   <div class="py-5">
      <div class="row card-index g-0 p-3 col-lg-5 border border-secondary rounded shadow mt-5 ms-md-5">
   <div class="card-body">
@@ -21,12 +21,28 @@
   </div> 
 </div>
 </main>
+    <!--========================================================== -->
+			    <!-- WhatsApp -->
+    <!--========================================================== -->
+
+<div class="col-3">
+<div class="whatsapp_ic "  >
+  <a href="https://api.whatsapp.com/send?phone=5492236036096" class="btn-wsp" target="_blank">
+    <i class="fab fa-whatsapp fa-4x"></i>
+  </a>
+</div>
+</div>
+
+
+
+
 
     <!--========================================================== -->
 			    <!-- Servicios -->
     <!--========================================================== -->
 
 <div class="container h-100 w-md-75 ">
+
   <div class="container row my-5">
       <div class="col-3 col-lg-2 mt-4 mt-md-1 animado">
        <img class="p-2 img-thumbnail float-left icono-seccion" src="{% static 'img/estetoscopio.png' %}" alt="Icono de un estotoscopio">
@@ -34,14 +50,15 @@
   <div class="col">
   <div class="p-2">
     <a href="#" class="enlace-seccion"><h3 class="titulo-seccion"><b>Pedí tu turno de consulta veterinaria</b></h3></a>
-      <div class="">
+      <div class="p-2">
 	  <p>     En tuVeterinaria gestionamos los turnos de consulta veterinaria. Seleccioná la fecha y el horario entre las disponibles y le confirmaremos su turno. Además, un día antes de la fecha te recordaremos el horario mediante email y/o WhatsApp.</p>
       </div>
       </div>
     </div>
+    </div>
 
   <div class="container row mt-5">
-      <div class="col-3 col-lg-2 mt-4 mt-md-1 animado jeri">
+      <div class="col-3 col-lg-2 mt-4 mt-md-1 animado">
       <img class="p-2 img-thumbnail float-left icono-seccion" src="{% static 'img/jeringuilla.png' %}" alt="icono de una jeringuilla">
 		    </div>
     <div class="col">

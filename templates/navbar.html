@@ -50,7 +50,9 @@
 <!-- Usuario autenticado(inicio) -->
       {% if user.is_authenticated %}
       <div class="text-dark text-capitalize ms-4 " id="nombre-usuario">
-        <a class="nav-link" href="#services"><i class="fa-solid fa-user me-2"></i>{{user.username}}</a>
+        <a class="nav-link" href="#services">
+          <!-- <i class="fa-solid fa-user me-2"></i> -->
+          {{user.username}}</a>
       </div>
                   <li class="nav-item">
                       <a class="nav-link" href="{% url 'logout' %}">Finalizar Sesión</a>
