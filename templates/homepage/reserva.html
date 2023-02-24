@@ -1,3 +1,35 @@
+<!-- {% extends "layout.html" %} -->
+<!-- {% load static %} -->
+<!-- <h4>Reserva</h4> -->
+
 {% extends "layout.html" %}
 {% load static %}
-<h4>Reserva</h4>
+{% block tienda %} 
+
+<!-- <div class="container"> -->
+<div class="container-fluid fondo-formulario" style=" background-image:url({% static "img/patron1.jpg" %});" >
+
+    <div class="bg-light border rounded shadow ms-4 p-2 w-2">
+          <h1>Estos son nuestros productos:</h1>
+    </div>
+  <div class="container d-flex flex-wrap align-items-center p-3 m-2">
+          {% for producto in productos %}
+
+    <div class="card m-2 p-4 border rounded shadow d-flex" style="width: 16rem; height:20rem;">
+      <img class="card-img-top justify-content-center" src="/media/{{producto.imagen}}" alt="Card image cap" style="width: 40%">
+          <div class="card-body">
+            <h5 class="card-title"> {{producto.producto}}  </h5>
+            <p class="card-text"> {{producto.categoria}} </p>
+          </div>
+            <a href="{% url 'ver' producto.id %}" class="btn btn-primary" style="margin-top: 10px;">Ver Producto </a>
+    </div>
+
+          {% endfor %}
+
+</div>
+</div>
+
+
+{% endblock %}
+
+

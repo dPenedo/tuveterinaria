@@ -1,0 +1,4 @@
+mercadopago
+django-environ
+pytest-mock
+requests

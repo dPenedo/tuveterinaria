@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'tienda.apps.TiendaConfig',
     'usuarios.apps.UsuariosConfig',
     'django.contrib.sitemaps',
+    'sslserver',
 ]
 
 SITE_ID = 1
