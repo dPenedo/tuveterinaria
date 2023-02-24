@@ -3,7 +3,7 @@ from .models import Producto
 from django import forms
 
 class SearchLibroForm(forms.Form):
-    querycom = forms.CharField(label='Ingresar el nombre de libro a buscar', widget=forms.TextInput(attrs={'size': 32, 'class': 'form- control'}))
+    querycom = forms.CharField(label='Ingrese el nombre del producto que quiera buscar', widget=forms.TextInput(attrs={'size': 32, 'class': 'form- control'}))
 
 
 

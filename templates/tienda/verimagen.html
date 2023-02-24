@@ -4,10 +4,10 @@
 
 <div class="container-fluid fondo-formulario p-4" style=" background-image:url({% static "img/patron1.jpg" %});" >
     <div class="card border border-radius shadow m-3">
-        <div class="card-title border m-4 p-3 bg-light " style="width: 38rem;" >
+        <div class="card-title border m-4 p-3 bg-light " style="width: 80%;" >
             <h1>{{producto.producto}}</h1>
           </div>
-            <img src="/media/{{producto.imagen}}" class="mx-auto img-responsive" width="300px">
+            <img src="/media/{{producto.imagen}}" class="mx-auto img-responsive" style="width: 15rem;">
 
             <div class="container border border-radius">
                 
@@ -32,7 +32,10 @@
 
 
           </div>
-                <a href="{% url 'verimagenes' %}" class="btn btn-primary rounded" style="margin-top: 10px;">Ir a la tienda</a>
+          <div class="container  w-md-50 w-75 my-3">
+                <a href="{% url 'verimagenes' %}" class="btn w-100 btn-primary rounded" style="margin-top: 10px;">Comprar producto</a>
+                <a href="{% url 'verimagenes' %}" class="btn w-100 btn-secondary rounded" style="margin-top: 10px;">Volver a la tienda</a>
+            </div> 
       </div>
 
 
