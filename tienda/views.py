@@ -28,7 +28,6 @@ def cargar_imagen(request):
 
 class VerImagenes(View):
     template = "tienda/verimagenes.html"
-
     def get(self, request):
         params={}
         try:
@@ -37,6 +36,19 @@ class VerImagenes(View):
             raise Http404
         params["productos"] = productos
         return render(request, self.template, params)
+
+
+class VerImagenesAccesorios(View):
+    template = "tienda/accesorios.html"
+    def get(self, request):
+        params={}
+        try:
+            productos = Producto.objects.all()
+        except Producto.DoesNotExist:
+            raise Http404
+        params["productos"] = productos
+        return render(request, self.template, params)
+
 
 def ver_imagen(request, producto_id):
     params = {}
