@@ -12,6 +12,7 @@
             {% for producto in productos %}
                 {% if producto.estado == "Publicado" %}
                 <li class="list-group-item list-group-item-primary"><b>Nombre del producto:</b> {{producto.producto}}</li> 
+                <li class="list-group-item list-group-item-primary"><b>Accesorios:</b> {{producto.accesorios}}</li> 
                 <li class="list-group-item"><b>Fecha de publicación:</b> {{producto.fecha_publicacion}}</li> 
                 <li class="list-group-item"><b>Estado del producto:</b>{{producto.estado}}</li> 
                 {% else %}

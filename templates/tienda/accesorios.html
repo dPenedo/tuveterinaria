@@ -10,13 +10,14 @@
     </div>
   <div class="container d-flex flex-wrap align-items-center p-3 m-2">
           {% for producto in productos %}
-            {% if producto.categoria == "accesorios" %} 
+        {% if producto.accesorios == True %} 
 
 
     <div class="card m-2 p-4 border rounded shadow d-flex" style="width: 16rem; height:20rem;">
-      <img class="card-img-top justify-content-center" src="/media/{{producto.imagen}}" alt="Card image cap" style="width: 40%">
+      <img class="card-img-top justify-content-center " src="/media/{{producto.imagen}}" alt="Card image cap" style="width: 50%">
           <div class="card-body">
             <h5 class="card-title"> {{producto.producto}}  </h5>
+            <h5 class="card-title bg-light border radius shadow">$ {{producto.precio}}</h5>
             <p class="card-text"> {{producto.categoria}} </p>
           </div>
             <a href="{% url 'ver' producto.id %}" class="btn btn-primary" style="margin-top: 10px;">Ver Producto </a>

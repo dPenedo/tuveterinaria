@@ -30,9 +30,9 @@ class Producto(models.Model):
     categoria = models.ForeignKey(
         Categoria, blank=False, null=True, on_delete=models.CASCADE
     )
-    
+    accesorios = models.BooleanField(default=False) 
     stock = models.IntegerField(default=0)
-    descripcion = models.TextField(  default="")
+    descripcion = models.TextField(default="")
     precio = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
     descuento = models.IntegerField(default=0)
     
