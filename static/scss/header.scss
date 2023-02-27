@@ -1,0 +1,66 @@
+//Navbar
+#mainNav{ .nav-link{
+    color: $color1 ;
+  }
+  .active{
+  font-weight: bold;}
+  #logo{
+    width: 6rem;
+    height: auto;
+  }
+#nombre-usuario{
+    text-decoration: underline;
+}
+}
+
+.card-index {
+    background-color:$color2;
+    border-radius: 50%;
+    
+    #logo-simple{
+    width:10rem;
+    height: auto;
+    border-radius: 20%;
+    }
+  }
+
+
+.enlace-seccion{
+     text-decoration: none;
+     color: #000;
+}
+
+
+.user-comment{
+    border-radius: 50px;
+    width: 100px;
+    position: relative;
+  }
+.read-more {font-weight: bold; 
+          cursor: pointer; 
+          text-decoration: none;}
+  
+.whatsapp_ic {
+  position: fixed;
+
+  height: 25px;
+  bottom: 75%;
+  right: 3%;
+
+  color: #fff;
+  font-size: 15px;
+
+  a {
+    border-radius: 15px;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    background-color: #7BB75B;
+    color: #fff;
+  }
+  a:hover {
+    background-color: #46C657;
+  }
+}

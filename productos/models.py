@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import format_html
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Categoria(models.Model):
@@ -23,7 +24,10 @@ class Producto(models.Model):
     estado = models.CharField(max_length=10, choices=APROBACION_PRODUCTO, default='Borrador')
 
     producto = models.CharField(max_length=150)
-    descripcion = models.CharField(max_length=250, default='Descripción')
+    # descripcion = models.CharField(max_length=250, default='Descripción')
+    # descripcion = models.CharField(max_length=250, default='Descripción')
+    descripcion = RichTextUploadingField('descripcion', blank=True, null=True)
+
     fecha_publicacion = models.DateTimeField('Fecha de publicación')
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", blank=True, null=True) 
     #categoria = models.ManyToManyField(Categoria)    

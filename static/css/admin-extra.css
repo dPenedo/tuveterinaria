@@ -1,0 +1,18 @@
+body{
+    color:red !important;
+}
+#header{
+    background-color: #210203;
+}
+.module h2, .module caption, .inline-group h2 {
+    background-color: #210203;
+}
+div.breadcrumbs{
+    background-color: #210203;
+}
+a:link, a:visited{
+    color:#210203;
+}
+#branding h1 a:link, #branding h1 a:visited {
+    color: #CFBEF7;
+  }

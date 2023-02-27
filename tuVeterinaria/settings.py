@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps de terceros
+    'ckeditor',
+    'ckeditor_uploader',
     'captcha',
     # Mis apps
     'contacto.apps.ContactoConfig',
@@ -155,3 +157,30 @@ LOGIN_URL = 'django.contrib.auth.views.login'
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AND_LOGIN = True
 SITE_ID = 1
+
+# CKEDITOR
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': (
+        ['div', 'Source', '-', 'Save', 'NewPage', 'Preview', 'Preview' '-', 'Templates'],
+        ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', 'PasteFromWord' '-', 'Print', 'SpellChecker', 'SpellChecker', 'Scayt'],
+        ['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'SelectAll', 'RemoveFormat'],
+        ['Form', 'Checkbox', 'Radio', 'TextField',  'Textarea', 'Select', 'Button', 'ImageButton', 'ImageButton', 'HiddenField'],
+        ['Bold','Italic', 'Underline', 'Strike', '-','Subscript', 'Superscript'],
+        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent','Blockquote'],
+        ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+        ['Link', 'Unlink', 'Anchor'],
+        ['Image','Update', 'Flash', 'Table', 'HorizontalRule', 'HorizontalRule', 'Smiley', 'SpecialChar','PageBreak'],
+        ['Styles', 'Format', 'Font', 'FontSize'],
+        ['TextColor', 'BGColor'],
+        ['Maximize', 'ShowBlocks', '-', 'About', 'pbckcode'],
+        ),
+    }
+}
+
+
+
+
+

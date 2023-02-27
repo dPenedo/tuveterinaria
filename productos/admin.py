@@ -25,7 +25,7 @@ class ProductoAdmin(admin.ModelAdmin):
             "Datos generales",
             {
                 "fields": [
-                    'fecha_publicacion', 'producto', 'estado' , 'imagen', 'descripcion'
+                    'fecha_publicacion', 'producto', 'estado' , 'imagen', 'descripcion',
                 ]
             },
         ),

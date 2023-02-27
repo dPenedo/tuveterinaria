@@ -1,0 +1,24 @@
+#mainNav a {
+  color: #402525;
+  color: #1C0102 !important;
+}
+
+#logo {
+  width: 15%;
+}
+
+.card {
+  background-color: #E0DACA;
+}
+
+.user-comment {
+  border-radius: 50px;
+  width: 100px;
+  position: relative;
+}
+
+.read-more {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
