@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.html import format_html
 from ckeditor_uploader.fields import RichTextUploadingField
+from simple_history.models import HistoricalRecords
+
 
 
 class Categoria(models.Model):
@@ -36,9 +38,11 @@ class Producto(models.Model):
     )
     accesorios = models.BooleanField(default=False) 
     stock = models.IntegerField(default=0)
-    descripcion = models.TextField(default="")
+    # descripcion = models.TextField(default="")
     precio = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
     descuento = models.IntegerField(default=0)
+    
+    history = HistoricalRecords()
     
     def tipo_de_producto(self):
         if self.estado == 'Retirado':

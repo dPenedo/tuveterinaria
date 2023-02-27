@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'captcha',
+    'simple_history',
     # Mis apps
     'contacto.apps.ContactoConfig',
     'productos.apps.ProductosConfig',
@@ -66,7 +67,8 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', ]
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
+    'simple_history.middleware.HistoryRequestMiddleware', ]
 
 ROOT_URLCONF = 'tuVeterinaria.urls'
 
