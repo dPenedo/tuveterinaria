@@ -4,11 +4,10 @@
 {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
 
-{% block extrastyle %}
 
-<link rel="stylesheet" type="text/css" href="{% static "css/admin-extra.css" %}" />
+<!-- <link rel="stylesheet" type="text/css" href="{% static "css/admin-extra.css" %}" /> -->
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'css/admin-extra.css' %}" />{% endblock %}
 
-{% endblock %}
 
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
