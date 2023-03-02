@@ -1,7 +1,6 @@
 from datetime import datetime
 # from http.client import HTTPResponse
 import mimetypes
-
 from django.http.response import mimetypes
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -64,8 +63,8 @@ class BuscarLibro2(View):
 
         else:
             data_json = "fallo"
-        mimetype = "application/json"
-        return HttpResponse(data_json, mimetype)
+            mimetype = "application/json"
+            return HttpResponse(data_json, mimetype)
 
 
 
