@@ -1,18 +1,17 @@
 from django.contrib import admin
-from productos.models import Categoria
+# from productos.models import Categoria
 from productos.models import Producto
 from django.http import HttpResponse
 from django.core import serializers
 from django.shortcuts import render
 
 class ProductoInline(admin.TabularInline):
-
     model = Producto
     extra = 0
 
-class CategoriaAdmin(admin.ModelAdmin):
-    inlines = [ProductoInline]
-
+# class CategoriaAdmin(admin.ModelAdmin):
+#     inlines = [ProductoInline]
+#
 
 
 @admin.register(Producto)
@@ -20,7 +19,7 @@ class ProductoAdmin(admin.ModelAdmin):
     #fields =['categoria', 'fecha_publicacion', 'producto', 'imagen']
 
     fieldsets = [
-        ("Relación", {"fields": ["categoria"]}),
+        ("Relación", {"fields": ["categorias"]}),
         (
             "Datos generales",
             {
@@ -75,7 +74,7 @@ class ProductoAdmin(admin.ModelAdmin):
 
 
 #admin.site.register(Producto, ProductoAdmin)
-admin.site.register(Categoria, CategoriaAdmin)
+# admin.site.register(Categoria, CategoriaAdmin)
 
 
 #admin.site.register(Categoria)

@@ -5,25 +5,34 @@ from simple_history.models import HistoricalRecords
 
 
 
-class Categoria(models.Model):
-    nombre = models.CharField(max_length=100, db_index=True)
-    descripcion = models.CharField(max_length=250, db_index=True, default="descripcion")
-    slug = models.SlugField(max_length=100, db_index=True)
-
-    def __str__(self):
-        return '%s' % self.nombre
+# class Categoria(models.Model):
+#     nombre = models.CharField(max_length=100, db_index=True)
+#     descripcion = models.CharField(max_length=250, db_index=True, default="descripcion")
+#     slug = models.SlugField(max_length=100, db_index=True)
+#
+#     def __str__(self):
+#         return '%s' % self.nombre
 
 class Producto(models.Model):
 
     Borrador = 'Borrador'
     Publicado = 'Publicado'
     Retirado = 'Retirado'
+    Alimentos = 'Alimentos'
+    Accesorios = 'Accesorios'
+    Farmacia = 'Farmacia'
     APROBACION_PRODUCTO = (
         (Borrador, 'Borrador'),
         (Publicado, 'Publicado'),
         (Retirado, 'Retirado'),
     )
+    CATEGORIAS = (
+            (Alimentos, 'Alimentos'),
+            (Accesorios, 'Accesorios'),
+            (Farmacia, 'Farmacia'),
+            )
     estado = models.CharField(max_length=10, choices=APROBACION_PRODUCTO, default='Borrador')
+    categorias = models.CharField(max_length=10, choices=CATEGORIAS, default='Alimentos')
 
     producto = models.CharField(max_length=150)
     # descripcion = models.CharField(max_length=250, default='Descripción')
@@ -33,9 +42,9 @@ class Producto(models.Model):
     fecha_publicacion = models.DateTimeField('Fecha de publicación')
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", blank=True, null=True) 
     #categoria = models.ManyToManyField(Categoria)    
-    categoria = models.ForeignKey(
-        Categoria, blank=False, null=True, on_delete=models.CASCADE
-    )
+    # categoria = models.ForeignKey(
+    #     Categoria, blank=False, null=True, on_delete=models.CASCADE
+    # )
     accesorios = models.BooleanField(default=False) 
     stock = models.IntegerField(default=0)
     # descripcion = models.TextField(default="")

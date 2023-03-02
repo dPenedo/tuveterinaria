@@ -26,8 +26,8 @@ def cargar_imagen(request):
         params['form'] = form
         return render(request, 'tienda/formulario.html', params)
 
-class VerImagenes(View):
-    template = "tienda/verimagenes.html"
+class VerImagenesAlimentos(View):
+    template = "tienda/alimentos.html"
     def get(self, request):
         params={}
         try:
@@ -37,6 +37,16 @@ class VerImagenes(View):
         params["productos"] = productos
         return render(request, self.template, params)
 
+class VerImagenesFarmacia(View):
+    template = "tienda/farmacia.html"
+    def get(self, request):
+        params={}
+        try:
+            productos = Producto.objects.all()
+        except Producto.DoesNotExist:
+            raise Http404
+        params["productos"] = productos
+        return render(request, self.template, params)
 
 class VerImagenesAccesorios(View):
     template = "tienda/accesorios.html"
@@ -50,14 +60,32 @@ class VerImagenesAccesorios(View):
         return render(request, self.template, params)
 
 
-def ver_imagen(request, producto_id):
+def ver_imagenAlimentos(request, producto_id):
     params = {}
     try:
         producto = Producto.objects.get(pk=producto_id)
     except Producto.DoesNotExist:
         raise Http404
     params["producto"] = producto
-    return render(request, "tienda/verimagen.html", params)
+    return render(request, "tienda/ver-alimentos.html", params)
+
+def ver_imagenAccesorios(request, producto_id):
+    params = {}
+    try:
+        producto = Producto.objects.get(pk=producto_id)
+    except Producto.DoesNotExist:
+        raise Http404
+    params["producto"] = producto
+    return render(request, "tienda/ver-accesorios.html", params)
+
+def ver_imagenFarmacia(request, producto_id):
+    params = {}
+    try:
+        producto = Producto.objects.get(pk=producto_id)
+    except Producto.DoesNotExist:
+        raise Http404
+    params["producto"] = producto
+    return render(request, "tienda/ver-farmacia.html", params)
 
 class EjemploLocalSotage(View):
     template = "tienda/localstorage.html"
