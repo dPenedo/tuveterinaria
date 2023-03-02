@@ -59,6 +59,14 @@ class VerImagenesAccesorios(View):
         params["productos"] = productos
         return render(request, self.template, params)
 
+def ver_imagen(request, producto_id):
+    params = {}
+    try:
+        producto = Producto.objects.get(pk=producto_id)
+    except Producto.DoesNotExist:
+        raise Http404
+    params["producto"] = producto
+    return render(request, "tienda/verimagen.html", params)
 
 def ver_imagenAlimentos(request, producto_id):
     params = {}
@@ -67,7 +75,7 @@ def ver_imagenAlimentos(request, producto_id):
     except Producto.DoesNotExist:
         raise Http404
     params["producto"] = producto
-    return render(request, "tienda/ver-alimentos.html", params)
+    return render(request, "tienda/alimentos.html", params)
 
 def ver_imagenAccesorios(request, producto_id):
     params = {}

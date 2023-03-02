@@ -18,7 +18,7 @@
             <h5 class="card-title"> {{producto.producto}}  </h5>
             <!-- <p class="card-text"> {{producto.categoria}} </p> -->
           </div>
-            <a href="{% url 'ver-alimentos' producto.id %}" class="btn btn-primary" style="margin-top: 10px;">Ver Producto </a>
+            <a href="{% url 'ver' producto.id %}" class="btn btn-primary" style="margin-top: 10px;">Ver Producto </a>
     </div>
 
           {% endif %}
