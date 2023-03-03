@@ -1,3 +1,14 @@
+$theme-colors: (
+  "primary":    #5171a5,
+  // "secondary":    #80A4ED,
+  "secondary":    #D0CCD0,
+  "info":    #E1E5F2,
+  // "warning":    #C2C094,
+  "warning":    #9AADBF,
+  "light":    #F9F4ED,
+);
+
+
 @import "bootstrap/bootstrap.scss";
 @import "_variables.scss";
 @import "header.scss"; 
