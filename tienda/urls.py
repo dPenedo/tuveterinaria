@@ -7,8 +7,8 @@ from tienda.views import VerImagenesFarmacia
 from tienda.views import EjemploLocalSotage
 
 urlpatterns = [
-        path('cargar/', views.cargar_imagen, name="cargar"),
         path('<int:producto_id>/ver/', views.ver_imagen, name="ver"),
+        path('cargar/', views.cargar_imagen, name="cargar"),
         path('alimentos/', VerImagenesAlimentos.as_view(), name="alimentos"),
         path('accesorios/', VerImagenesAccesorios.as_view(), name="accesorios"),
         path('farmacia/', VerImagenesFarmacia.as_view(), name="farmacia"),

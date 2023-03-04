@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block content %}
+
 <div class="container">
   <div class="row">
       <div class="col-12 prueba" style="padding-top:80px;">
@@ -24,6 +25,13 @@
                     </form>
                </div>
             </div>
+
+
+
+
+
+
+
             <div id="contenedor_filtrado" class="col-xs-10 col-sm-offset-2 col-sm-8  
                                               col-md-offset-4 col-md-4 "></div>
         </section>
@@ -40,12 +48,10 @@
   <div class="container">
       <div class="row">
           <div class="col-12 prueba" style="padding-top:200px;">
- 
+dic 
           </div>
       </div>
   </div>
-{% endblock  %}
-{% block scripts %}
 <script type="text/javascript" src="{% static 'JS/jquery-3.6.1.js' %}"></script> 
 <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
@@ -58,8 +64,42 @@
 </script>
 <script type="text/javascript" src="{% static 'JS/ajax.js' %}"></script>
 
-        <script type="text/javascript" src="{% static 'JS/autoc/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'JS/autoc/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'JS/jquery-ui.min.js' %}"></script> 
 
+
+<script>
+
+$( "#boton_prod" ).click(function(){
+	valor = $( "#id_querycom" ).val();
+	respuestproducto(valor)
+    console.log(respuestproducto(valor))
+});
+function respuestproducto(valor){
+    $.ajax({
+        beforeSend : function(xhr, settings){
+			if(!csrfSafeMethod(settings.type) && !this.crossDomain){
+				xhr.setRequestHeader("X-CSRFToken", csrftoken);
+			}
+		},
+		url : "/tienda/",
+		type : "GET",
+		data : { valor : valor,},
+		success : function(json){
+            valor_retornado = "<h2 style='text-align:center;'>"+json[0].producto+"</h2>"+ "<img style='width:100%;' src='/media/" + json[0].ruta_imagen + "'/>"
+            $('#contenedor_filtrado').html(valor_retornado);
+            console.log(json[0].producto);
+		},
+		error : function(xhr, errmsg, err){
+			console.log('Error en carga de respuesta');
+		},
+    });
+}
+</script>
+
+
+{% endblock  %}
+{% block scripts %}
 {% endblock %}
  
 

@@ -11,6 +11,7 @@ function csrfSafeMethod(method){
 $( "#boton_prod" ).click(function(){
 	valor = $( "#id_querycom" ).val();
 	respuestproducto(valor)
+    alert("yeah")
 });
 function respuestproducto(valor){
     $.ajax({
