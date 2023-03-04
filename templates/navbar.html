@@ -1,7 +1,7 @@
 {% load static %}
 
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-    <a class="navbar-brand ms-3" href="{% url 'index' %}"><img id="logo" src="{% static 'img/logo veterinaria.png' %}" alt="logo de tuVeterinaria"/></a>
+    <a class="navbar-brand ms-3 pulsar" href="{% url 'index' %}"><img id="logo" src="{% static 'img/logo veterinaria.png' %}" alt="logo de tuVeterinaria"/></a>
   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -64,10 +64,10 @@
         {% else %}
 
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'registro' %}">Registrarme</a>
+                    <a class="nav-link pulsar" href="{% url 'registro' %}">Registrarme</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                      <a class="nav-link pulsar" href="{% url 'login' %}">Iniciar Sesión</a>
                   </li>
      {% endif %}
 <!-- Usuario No autenticado(fin) -->

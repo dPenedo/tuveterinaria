@@ -9852,6 +9852,10 @@ textarea.form-control-lg {
   transform: scale(0.96);
 }
 
+.pulsar:active {
+  transform: scale(0.96);
+}
+
 .enlace-seccion {
   text-decoration: none;
   color: #000;
