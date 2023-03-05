@@ -51,7 +51,7 @@ class BuscarLibro2(View):
             libro = Producto.objects.filter(producto__icontains=q)
             results = []
             for rec in libro:
-                print(rec.producto)
+                print(rec.id)
                 print(rec.estado)
                 print(rec.imagen)
                 data = {}

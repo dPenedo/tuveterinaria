@@ -18,6 +18,7 @@
             <h5 class="card-title"> {{producto.producto}}  </h5>
             <!-- <p class="card-text"> {{producto.categoria}} </p> -->
           </div>
+            <h5 class="card-title bg-light border radius shadow">$ {{producto.precio}}</h5>
             <a href="{% url 'ver' producto.id %}" class="btn btn-primary" style="margin-top: 10px;">Ver Producto </a>
     </div>
 
