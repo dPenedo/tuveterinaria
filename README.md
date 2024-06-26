@@ -81,9 +81,9 @@ tuVeterinaria is a Django web app e-commerce platform created for educational pu
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT license](https://opensource.org/license/mit).
+This project is licensed under the MIT License - see the [MIT license](https://opensource.org/license/mit). See the [LICENSE](LICENSE) file for details.
 
 
 ---
 ## Contact
-For more information, visit my [website](https://dpenedo.com) where you can find my portfolio, blog, and contact options. See the [LICENSE](LICENSE) file for details.
+For more information, visit my [website](https://dpenedo.com) where you can find my portfolio, blog, and contact options. 
