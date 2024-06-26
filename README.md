@@ -2,14 +2,17 @@
 
 tuVeterinaria is a Django web app e-commerce platform created for educational purposes during my Diploma studies at the [UTN](https://www.frba.utn.edu.ar/).
 
-### Preview
+## Preview
 
+#### Landing Page
 ![Home Page](screenshots/captura-admin.png)
-![Product Page](screenshots/captura-search.png)
+#### Product Search 
+![Product Search](screenshots/captura-search.png)
+#### Admin Page 
 ![Admin Page](screenshots/captura-tuveterinaria.png)
 
 
-### Features
+## Features
 
 - **User Registration and Login:** Secure authentication system for users.
 - **Customized Admin Page:** Easy management of products, categories, and orders.
@@ -18,7 +21,7 @@ tuVeterinaria is a Django web app e-commerce platform created for educational pu
 - **Modern UI:** Styles and animations using [GreenSock Animation Platform](https://greensock.com/), SASS, and Bootstrap.
 - **Unique Design:** Original design created from scratch. The Figma source is [available](https://www.figma.com/design/siyM2a68nuTt1syVqaN1Ao/tuVeterinaria?node-id=0-1).
 
-### How to Run It
+## How to Run It
 
 1. **Clone the repository:**
 
@@ -64,7 +67,7 @@ tuVeterinaria is a Django web app e-commerce platform created for educational pu
 
 
 
-### Technologies Used
+## Technologies Used
 
 - **Django:** Backend framework.
 - **SQLite:** Data base
@@ -76,11 +79,11 @@ tuVeterinaria is a Django web app e-commerce platform created for educational pu
 - **GreenSock Animation Platform (GSAP):** For animations and transitions.
 - **Figma:** Design and prototyping tool.
 
-### License
+## License
 
 This project is licensed under the MIT License - see the [MIT license](https://opensource.org/license/mit).
 
 
 ---
-### Contact
+## Contact
 For more information, visit my [website](https://dpenedo.com) where you can find my portfolio, blog, and contact options. See the [LICENSE](LICENSE) file for details.
