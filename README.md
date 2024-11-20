@@ -2,24 +2,28 @@
 
 tuVeterinaria is a Django web app e-commerce platform created for educational purposes during my Diploma studies at the [UTN](https://www.frba.utn.edu.ar/).
 
+## Features
+
+-   **User Registration and Login:** Secure authentication system for users.
+-   **Customized Admin Page:** Easy management of products, categories, and orders.
+-   **Product Sections:** Dedicated sections for Food, Accessories, and Pharmacy products.
+-   **Product Search:** Efficient search functionality powered by Ajax for real-time results.
+-   **Modern UI:** Styles and animations using [GreenSock Animation Platform](https://greensock.com/), SASS, and Bootstrap.
+-   **Unique Design:** Original design created from scratch. The Figma source is [available](https://www.figma.com/design/siyM2a68nuTt1syVqaN1Ao/tuVeterinaria?node-id=0-1).
+
 ## Preview
 
 #### Landing Page
-![Home Page](screenshots/captura-admin.png)
-#### Product Search 
+
+![Home Page](screenshots/captura-tuveterinaria.png)
+
+#### Product Search
+
 ![Product Search](screenshots/captura-search.png)
-#### Admin Page 
-![Admin Page](screenshots/captura-tuveterinaria.png)
 
+#### Admin Page
 
-## Features
-
-- **User Registration and Login:** Secure authentication system for users.
-- **Customized Admin Page:** Easy management of products, categories, and orders.
-- **Product Sections:** Dedicated sections for Food, Accessories, and Pharmacy products.
-- **Product Search:** Efficient search functionality powered by Ajax for real-time results.
-- **Modern UI:** Styles and animations using [GreenSock Animation Platform](https://greensock.com/), SASS, and Bootstrap.
-- **Unique Design:** Original design created from scratch. The Figma source is [available](https://www.figma.com/design/siyM2a68nuTt1syVqaN1Ao/tuVeterinaria?node-id=0-1).
+![Admin Page](screenshots/captura-admin.png)
 
 ## How to Run It
 
@@ -65,25 +69,24 @@ tuVeterinaria is a Django web app e-commerce platform created for educational pu
     python manage.py runserver
     ```
 
-
-
 ## Technologies Used
 
-- **Django:** Backend framework.
-- **SQLite:** Data base
-- **Python:** Programming language.
-- **JavaScript & Ajax:** For dynamic content and real-time updates.
-- **HTML & CSS:** Structure and styling of the web app.
-- **SASS:** CSS pre-processor for advanced styling.
-- **Bootstrap:** Front-end component library.
-- **GreenSock Animation Platform (GSAP):** For animations and transitions.
-- **Figma:** Design and prototyping tool.
+-   **Django:** Backend framework.
+-   **SQLite:** Data base
+-   **Python:** Programming language.
+-   **JavaScript & Ajax:** For dynamic content and real-time updates.
+-   **HTML & CSS:** Structure and styling of the web app.
+-   **SASS:** CSS pre-processor for advanced styling.
+-   **Bootstrap:** Front-end component library.
+-   **GreenSock Animation Platform (GSAP):** For animations and transitions.
+-   **Figma:** Design and prototyping tool.
 
 ## License
 
 This project is licensed under the MIT License - see the [MIT license](https://opensource.org/license/mit). See the [LICENSE](LICENSE) file for details.
 
-
 ---
+
 ## Contact
-For more information, visit my [website](https://dpenedo.com) where you can find my portfolio, blog, and contact options. 
+
+For more information, visit my [website](https://dpenedo.com) where you can find my portfolio, blog, and contact options.
